@@ -1,4 +1,10 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: 'Reproducible Research: Peer Assessment 1'
+output:
+  html_document:
+    keep_md: yes
+  pdf_document: default
+---
 
 ## Loading and preprocessing the data
 
@@ -23,7 +29,7 @@ sum_by_date<- aggregate(steps ~ date, data=not_na_my_data, FUN=sum)
 hist(sum_by_date$steps, main="Total number of steps taken each day", xlab="Daily steps", ylab="Frequence", col="red", breaks=20, ylim=(c(0, 20)))
 ```
 
-![](PA1_template_files/figure-html/steps_per_day-1.png) 
+![plot of chunk steps_per_day](figure/steps_per_day-1.png) 
 
 ```r
 # 2 - Calculate and report the mean and median total number of steps taken per day
@@ -44,7 +50,7 @@ average_steps_by_interval <- aggregate(steps ~ interval, not_na_my_data, FUN=mea
 plot(average_steps_by_interval, type="l", xlab ="Interval", ylab="Average of steps")
 ```
 
-![](PA1_template_files/figure-html/activity_pattern-1.png) 
+![plot of chunk activity_pattern](figure/activity_pattern-1.png) 
 
 ```r
 # 2 - Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -83,7 +89,7 @@ sum_by_date2<- aggregate(steps ~ date, data=new_data, FUN=sum)
 hist(sum_by_date2$steps, main="Total number of steps taken each day", xlab="Daily steps", ylab="Frequence", col="red", breaks=20, ylim=(c(0, 20)))
 ```
 
-![](PA1_template_files/figure-html/hist_new_values-1.png) 
+![plot of chunk hist_new_values](figure/hist_new_values-1.png) 
 
 ```r
 median_2 <- median(sum_by_date2$steps)
@@ -109,7 +115,7 @@ library("lattice")
 xyplot(steps ~ interval | weekdaytype, data=new_data, layout=c(1,2), type="a", ylim = c(0,400), xlab="Interval", ylab="Number of steps")
 ```
 
-![](PA1_template_files/figure-html/activity_patterns-1.png) 
+![plot of chunk activity_patterns](figure/activity_patterns-1.png) 
 
 The data shows that there is a bigger number of steps during the weekend and that they are more distributed than during the weekdays.
 
