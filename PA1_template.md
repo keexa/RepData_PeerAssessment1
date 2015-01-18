@@ -51,9 +51,10 @@ plot(average_steps_by_interval, type="l", xlab ="Interval", ylab="Average of ste
 # 2 - Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 index <- which.max(average_steps_by_interval$steps)
 interval_max <- average_steps_by_interval$interval[index]
+max_steps <- max(average_steps_by_interval$steps)
 ```
 
-The 5-minute interval which contains the maximum number of steps is one with id: 835
+The maximum number of steps is 206.2 at the 5-minute interval 835
 
 ## Imputing missing values
 
