@@ -1,10 +1,5 @@
----
-title: 'Reproducible Research: Peer Assessment 1'
-output:
-  html_document:
-    keep_md: yes
-  pdf_document: default
----
+Reproducible Research: Peer Assessment 1
+===============
 
 ## Loading and preprocessing the data
 
@@ -82,7 +77,7 @@ mean_2 <- mean(sum_by_date2$steps)
 We can observe that the removal of the missing values changes the frequence of appearance of just the mean of the daily steps while the other daily steps do not seem to be affected by any changes.  
 This is because we have given the average number of steps per interval across the days to replace the missing values.
 
-The **median** of the total number of steps taken per day considering the replacement of missing values is `r specify_decimal(median_2,1)` and the **mean** is `r specify_decimal(mean_2,1)`
+The **median** of the total number of steps taken per day considering the replacement of missing values is `r specify_decimal(median_2, 1)` and the **mean** is `r specify_decimal(mean_2, 1)`
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
